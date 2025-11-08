@@ -1,5 +1,9 @@
 import streamlit as st
 
+# --- Title ---
+st.title("Breadth First Search (BFS) and Depth First Search (DFS) Visualization")
+st.markdown("Select a starting node and choose which algorithm to run.")
+
 # --- Display image ---
 st.image("LabReport_BSD2513_#1.jpg", caption="Graph Representation", use_container_width=True)
 
@@ -52,10 +56,6 @@ def dfs(graph, start_node, visited=None, traversal_order=None):
     
     return traversal_order
 
-
-# --- Streamlit UI ---
-st.title("Breadth First Search (BFS) and Depth First Search (DFS) Visualization")
-st.markdown("Select a starting node and choose which algorithm to run.")
 
 # Dropdown for starting node
 start_node = st.selectbox("Select Starting Node:", list(graph.keys()))
